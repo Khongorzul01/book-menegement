@@ -8,21 +8,21 @@ app.get("/", function (req, res) {
       throw error;
     } else {
       const date = JSON.parse(data);
-       const maxes= date.books.map(element => {
+       const mini= date.books.map(element => {
          return element
        })
-       let max = maxes[0]
-       for(let i=0; i<maxes.length; i++){
-         if(maxes[i].pages>=max.pages){
-           max=maxes[i]
+       let min = mini[0]
+       for(let i=0; i<mini.length; i++){
+         if(mini[i].pages <= min.pages){
+           min=mini[i]
          }
        }
-       res.send(max);
+       res.send(min);
         }
        }) 
       
 
 });
 
-app.listen(3003);
+app.listen(3002);
 
