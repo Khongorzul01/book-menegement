@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 
 app.get("/", function (req, res) {
-  fs.readFile("book.json", (error, data) => {
+  fs.readFile("../data/book.json", (error, data) => {
     if (error) {
       throw error;
     } else {
