@@ -1,0 +1,12 @@
+<table>
+  <tbody style="display: flex; flex-direction: row">
+    <% books.books.map(item=>{%>
+    <tr>
+      <td>
+        <img width="200" height="200" alt="" src="<%=item.image %>" />
+      </td>
+      <td><%=item.title%></td>
+      <%})%>
+    </tr>
+  </tbody>
+</table>
