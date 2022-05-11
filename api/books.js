@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const fs = require("fs");
-const { body, validationResult } = require("express-validator");
+const fs = require("fs"); 
+// const { body, validationResult } = require("express-validator");
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static('../public'))
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("view options", { layout: false });
@@ -15,8 +15,6 @@ app.get("/", function (req, res) {
       throw error;
     } else {
       const data1 = JSON.parse(data);
-      // res.send(data1);
-      console.log(data1);
       res.render("addedbook", { books: data1 });
     }
   });

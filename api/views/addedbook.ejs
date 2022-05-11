@@ -1,12 +1,23 @@
-<table>
-  <tbody style="display: flex; flex-direction: row">
-    <% books.books.map(item=>{%>
-    <tr>
-      <td>
-        <img width="200" height="200" alt="" src="<%=item.image %>" />
-      </td>
-      <td><%=item.title%></td>
-      <%})%>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/public/style/books.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="body">
+      <div style="display: flex; flex-direction: row">
+        <% books.books.map(book=>{%>
+        <div class="books">
+          <img width="200" height="270px" alt="" src="<%=book.image %>" />
+          <p><%=book.title%></p>
+          <p><%=book.description%></p>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </body>
+</html>
