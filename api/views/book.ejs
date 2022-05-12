@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/style/books.css" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="navbar">
+        <h1>Books</h1>
+        <button class="add-btn">Addbook</button>
+      </div>
+      <div style="display: flex; flex-direction: row">
+        <% books.books.map(book=>{%>
+        <div class="books">
+          <img class="book-cover" alt="" src="<%=book.image %>" />
+          <div>
+            <h3><%=book.title%></h3>
+            <h4 class="publisher">Publisher: <%=book.publisher%></h4>
+            <p><%=book.description%></p>
+            <div class="dates">
+              <p>Published-date: <%=book.published.slice(0,-14)%></p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </body>
+</html>

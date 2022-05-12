@@ -1,23 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/public/style/books.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="body">
-      <div style="display: flex; flex-direction: row">
-        <% books.books.map(book=>{%>
-        <div class="books">
-          <img width="200" height="270px" alt="" src="<%=book.image %>" />
-          <p><%=book.title%></p>
-          <p><%=book.description%></p>
+<link rel="stylesheet" type="text/css" href="/style/books.css" />
+<body >
+    <div class="addbookbody">
+
+        <h2 class="formname">Added book form</h2>
+        <div class="addedbook">
+        <div>
+            <label for="ISBN">ISBN</label><br />
+        <input
+          type="number"
+          class="to-fill"
+          placeholder="ISBN"
+          name="ISBN"
+        /><br />
+        <label for="title">Title</label><br />
+        <input
+          type="text"
+          class="to-fill"
+          placeholder="Title"
+          name="title"
+        /><br />
+        <label for="subtitle">subTitle</label><br />
+        <input
+          type="text"
+          class="to-fill"
+          placeholder="subtitle"
+          name="subtitle"
+        /><br />
+        <label for="author">Author</label><br />
+        <input
+          type="text"
+          class="to-fill"
+          placeholder="Author"
+          name="author"
+        /><br />
+        <label for="published">Published</label><br />
+        <input
+          type="datetime"
+          class="to-fill"
+          placeholder="published-date"
+          name="published"
+        /><br />
+        <label for="publisher">Publisher</label><br />
+        <input
+          type="text"
+          class="to-fill"
+          placeholder="publisher"
+          name="publisher"
+        /><br />
         </div>
-        <%})%>
-      </div>
+       
+        <div>
+            <label for="pages">Pages</label><br />
+        <input
+          type="number"
+          class="to-fill"
+          placeholder="pages"
+          name="pages"
+        /><br />
+        <label for="website">Website</label><br />
+        <input
+          type="text"
+          class="to-fill"
+          placeholder="website"
+          name="website"
+        /><br />
+        <label for="image">Book image</label><br />
+        <input
+          id="image-file"
+          type="file"
+          class="to-fill"
+          name="image"
+        /><br />
+        <label for="bio">Description</label><br />
+        <textarea
+          name="description"
+          class="to-fill area"
+          placeholder="description"
+          id="bio"
+        ></textarea> <br/>
+        <button type="submit" class="footer-btn">Submit</button>
+        </div>
     </div>
-  </body>
-</html>
+    
+  </form>
+  </div>
+</body>
